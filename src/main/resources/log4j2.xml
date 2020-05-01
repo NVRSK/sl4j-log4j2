@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration shutdownHook="disable">
+    <properties>
+        <Property name="test.log4j.rootLevel">info</Property>
+    </properties>
+
+    <appenders>
+        <Console name="STDOUT" follow="true">
+            <PatternLayout pattern="%-5p %d{HH:mm:ss} {%c{1}}%notEmpty{%marker: } %m%n"/>
+        </Console>
+    </appenders>
+    <loggers>
+        <Root level="${sys:test.log4j.rootLevel}">
+            <appender-ref ref="STDOUT"/>
+        </Root>
+    </loggers>
+</configuration>
